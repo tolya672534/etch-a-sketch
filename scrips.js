@@ -5,7 +5,14 @@ const container = document.querySelector(".grid_wrapper");
 let width = 600 / userInput;
 let height = 600 / userInput;
 
-setGrid(userInput, userColor);
+if (userInput <= 100) {
+  setGrid(userInput, userColor);
+} else {
+  let errorMessage = document.createElement("div");
+  errorMessage.innerText =
+    "Wrong resolution, please, restart your page and use less than 100 pixels";
+  container.appendChild(errorMessage);
+}
 
 const setColor = () => {
   userColor = document.querySelector(".color_input").value;
@@ -16,7 +23,7 @@ const clearGrid = () => {
   setGrid(userInput, userColor);
 };
 
-function setGrid(resolution, color) {
+function setGrid(resolution) {
   for (let i = 0; i < resolution; i++) {
     for (let j = 0; j < resolution; j++) {
       let squareDiv = document.createElement("div");
