@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game_wrapper">
+      <div class="settings_wrapper">
+        <div class="color_input_wrap">
+          <input class="color_input" type="color" value="black" />
+          <button onclick="setColor()">set color</button>
+        </div>
+        <button onclick="clearGrid()">clear plate</button>
+      </div>
+      <div class="grid_wrapper"></div>
     </div>
-</body>
-<script src="scrips.js" defer></script>
+  </body>
+  <script src="scrips.js" defer></script>
 </html>
